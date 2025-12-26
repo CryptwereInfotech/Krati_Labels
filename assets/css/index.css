@@ -1,0 +1,163 @@
+/* Header Styling */
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    z-index: 999;
+}
+
+.header .container-fluid {
+    max-width: 1200px;
+    padding: 10px 15px;
+}
+
+.header .logo img {
+    height: 50px;
+}
+
+.navmenu {
+    margin-left: auto;
+}
+
+.navmenu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navmenu ul li {
+    position: relative;
+    margin: 0 10px;
+}
+
+.navmenu ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #28446f;
+}
+
+.navmenu ul li a.active,
+.navmenu ul li a:hover {
+    color: #28446f;
+}
+
+.navmenu ul li .dropdown ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    min-width: 220px;
+    z-index: 1000;
+}
+
+.navmenu ul li:hover>.dropdown ul {
+    display: block;
+}
+
+.navmenu ul li .dropdown ul li {
+    margin: 0;
+}
+
+.navmenu ul li .dropdown ul li a {
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+/* Style for nested submenu */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    right: 100%;
+    margin-top: -1px;
+    display: none;
+    border-radius: 0.25rem;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+/* Style for Available Brands */
+.brand-logo {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand-logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.brand-img {
+    max-width: 50%;
+    height: auto;
+    /* filter: grayscale(100%); */
+    transition: filter 0.3s ease;
+}
+
+/* Hover Effect: Remove grayscale and highlight on hover */
+/* .brand-logo:hover .brand-img {
+  filter: grayscale(0%);
+} */
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .navmenu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        padding: 10px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    .navmenu.show {
+        display: flex;
+    }
+
+    .navmenu ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navmenu ul li {
+        width: 100%;
+    }
+
+    .mobile-toggle {
+        display: inline-block;
+        cursor: pointer;
+        font-size: 24px;
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-toggle {
+        display: none;
+    }
+}
+
+.infrastructure-gallery img {
+    border: 2px solid #28446f;
+    border-radius: 8px;
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.about .infrastructure-gallery img {
+    width: 82%;
+    height: auto;
+    object-fit: cover;
+}

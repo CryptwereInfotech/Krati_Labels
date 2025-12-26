@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Barcode Scanners (Wired/Wireless, 1D/2D) | Krati Label & Technology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .section {
+            background-color: #fff;
+            border: 2px solid #28446f;
+            border-radius: 12px;
+            padding: 50px 20px;
+            margin-top: 60px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content h3 {
+            color: #28446f;
+            font-weight: bold;
+        }
+
+        .about-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .about-content ul li {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .about-content ul li i {
+            font-size: 24px;
+            color: #28446f;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+        .about-content ul li h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #28446f;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .product-gallery img {
+            border: 2px solid #28446f;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+           .product-gallery img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    border: 2px solid #28446f;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+       
+.product-gallery {
+    text-align: center;
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Include Dynamic Header -->
+    <div id="header"></div>
+
+    <!-- Barcode Scanners Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row gy-3">
+
+                <!-- Image Gallery -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-gallery">
+                        <img src="assets/img/Hardware Solutions/Barcode Scanners (WiredWireless, 1D2D)/Scanner2.webp" alt="Barcode Scanners Image 1"
+                            class="img-fluid mb-3">
+                        <img src="assets/img/Hardware Solutions/Barcode Scanners (WiredWireless, 1D2D)/Scanner1.jpg" alt="Barcode Scanners Image 2" class="img-fluid">
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="about-content ps-0 ps-lg-3">
+                        <h3>Barcode Scanners (Wired/Wireless, 1D/2D)</h3>
+                        <ul>
+                            <li>
+                                <i class="bi bi-lightning-charge"></i>
+                                <div>
+                                    <h4>Accurate & Fast Scanning</h4>
+                                    <p>Reads 1D and 2D barcodes instantly, even from damaged or low-contrast labels.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-plug"></i>
+                                <div>
+                                    <h4>Wired & Wireless Models</h4>
+                                    <p>Choose between USB-connected or Bluetooth-enabled for flexibility.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-briefcase"></i>
+                                <div>
+                                    <h4>Versatile Use Cases</h4>
+                                    <p>Ideal for retail, warehousing, logistics, healthcare, and manufacturing.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-shield-check"></i>
+                                <div>
+                                    <h4>Ergonomic & Durable Design</h4>
+                                    <p>Comfortable for extended use and built to withstand drops and rough handling.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-usb-symbol"></i>
+                                <div>
+                                    <h4>Plug-and-Play Integration</h4>
+                                    <p>Easily connects to POS, inventory systems, and mobile devices.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-camera-video"></i>
+                                <div>
+                                    <h4>Hands-Free & Presentation Modes</h4>
+                                    <p>Options for high-speed, continuous scanning.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-code-square"></i>
+                                <div>
+                                    <h4>High Compatibility</h4>
+                                    <p>Supports multiple platforms and barcode types including QR, PDF417, and Data
+                                        Matrix.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Dynamic Footer -->
+    <div id="footer" class="footer"></div>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Include Header and Footer -->
+    <script>
+        fetch("header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+
+</body>
+
+</html>

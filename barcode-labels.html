@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Barcode Labels | Krati Label & Technology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .section {
+            background-color: #fff;
+            border: 2px solid #28446f;
+            border-radius: 12px;
+            padding: 50px 20px;
+            margin-top: 60px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content h3 {
+            color: #28446f;
+            font-weight: bold;
+        }
+
+        .about-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .about-content ul li {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .about-content ul li i {
+            font-size: 24px;
+            color: #28446f;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+        .about-content ul li h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #28446f;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .product-gallery img {
+            border: 2px solid #28446f;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Include Dynamic Header -->
+    <div id="header"></div>
+
+    <!-- Barcode Labels Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row gy-3">
+
+                <!-- Image Gallery -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-gallery">
+                        <img src="assets/img/Labels & Tags/Barcode Labels (1D & 2D)/Accurate & Scannable.webp" alt="Barcode Labels Image 1" class="img-fluid mb-3">
+                        <img src="assets/img/Labels & Tags/Barcode Labels (1D & 2D)/Compliance Ready.webp" alt="Barcode Labels Image 2" class="img-fluid">
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="about-content ps-0 ps-lg-3">
+                        <h3>Barcode Labels</h3>
+                        <ul>
+                            <li>
+                                <i class="bi bi-upc-scan"></i>
+                                <div>
+                                    <h4>Accurate & Scannable</h4>
+                                    <p>Engineered for flawless reading by all barcode scanners.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-barcode"></i>
+                                <div>
+                                    <h4>Supports All Barcode Types</h4>
+                                    <p>1D (EAN, Code 128, UPC) and 2D (QR, Data Matrix, PDF417).</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-pen"></i>
+                                <div>
+                                    <h4>High Print Clarity</h4>
+                                    <p>Crisp, smudge-resistant printing for reliable tracking.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-shield-check"></i>
+                                <div>
+                                    <h4>Durable Materials</h4>
+                                    <p>Paper, synthetic, or laminated options for tough environments.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-layout-text-window"></i>
+                                <div>
+                                    <h4>Custom Sizes & Layouts</h4>
+                                    <p>Fit for product labeling, packaging, logistics, and more.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-printer"></i>
+                                <div>
+                                    <h4>Pre-Printed or Blank</h4>
+                                    <p>Available with static data or ready for variable printing.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle"></i>
+                                <div>
+                                    <h4>Compliance Ready</h4>
+                                    <p>Meets industry standards for retail, pharma, logistics, etc.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Dynamic Footer -->
+    <div id="footer" class="footer"></div>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Include Header and Footer -->
+    <script>
+        fetch("header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+
+</body>
+
+</html>

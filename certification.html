@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Certification | Krati Label & Technology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .cert-section {
+            background-color: #fff;
+            border: 2px solid #28446f;
+            border-radius: 12px;
+            padding: 40px 30px;
+            margin: 80px auto;
+            max-width: 900px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .cert-title {
+            color: #28446f;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .cert-pdf {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .download-btn {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .download-btn a {
+            background-color: #28446f;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .download-btn a:hover {
+            background-color: #0b121e;
+            .hover-zoom {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-zoom:hover {
+            transform: scale(1.20); /* subtle zoom */
+        } 
+        }
+    </style>
+</head>
+
+<body>
+<div id="header"></div>
+
+    <section class="cert-section">
+        <div class="container">
+            <h2 class="cert-title">GST Certificate</h2>
+
+            <!-- Embed PDF -->
+            <iframe class="cert-pdf" src="assets/docs/gst-certificate.pdf.pdf"></iframe>
+
+            <!-- Download Button -->
+            <div class="download-btn">
+                <a href="assets/docs/gst-certificate.pdf.pdf" target="_blank" class="btn btn-submit w-30 hover-zoom" download style="color: #fff !important;">Download Certificate</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Include Header and Footer -->
+    <script>
+        fetch("header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+<div id="footer" class="footer"></div>
+
+</body>
+
+</html>

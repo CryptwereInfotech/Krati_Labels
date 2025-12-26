@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Label Design Services | Krati Label & Technology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+    
+        .section {
+            background-color: #fff;
+            border: 2px solid #28446f;
+            border-radius: 12px;
+            padding: 50px 20px;
+            margin-top: 60px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+    
+        h2 {
+            .section-title {
+            color: #28446f;
+            font-weight: bold;
+            }
+        }
+    
+        p {
+            font-size: 16px;
+            color: #333;
+        }
+    
+        .service-images img {
+            border: 2px solid   ;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="header"></div>
+
+<div id="header"></div>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center mb-4 section-title">Label Design Services</h2>
+            <p>
+                At Krati Label & Technology, we provide expert Label Design Services to help businesses create
+                effective,
+                professional, and standards-compliant labels. Our design team ensures that each label meets your
+                industry-specific needs—whether it's for retail, healthcare, logistics, or manufacturing.
+            </p>
+            <p>
+                From branding elements to technical layout optimization, we offer end-to-end design solutions that
+                ensure
+                readability, scannability, and durability of your labels in real-world conditions.
+            </p>
+
+            <div class="row service-images mt-4">
+                <div class="col-lg-4 col-md-6 " >
+                    <img src="assets/img/services/Label Service 1.jpg" class="img-fluid" alt="Label Design 1"
+                    onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <img src="assets/img/services/Label service 2.jpg" class="img-fluid" alt="Label Design 2"
+                    onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <img src="assets/img/services/Label service 3.jpeg" class="img-fluid" alt="Label Design 3"
+                    onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Include Header and Footer -->
+    <script>
+        fetch("header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+<div id="footer" class="footer"></div>
+<!-- Include Header and Footer -->
+<script>
+    fetch("header.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("header").innerHTML = data);
+
+    fetch("footer.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+<div id="footer" class="footer"></div>
+
+</body>
+
+</html>

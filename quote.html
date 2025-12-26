@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get a Quote</title>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    h2 {
+      color: #28446f;
+    }
+
+    .btn-primary {
+      background-color: #28446f;
+      border-color: #28446f;
+    }
+
+    .btn-primary:hover {
+      background-color: #1f365c;
+      border-color: #1f365c;
+    }
+
+    .loading,
+    .error-message,
+    .sent-message {
+      display: none;
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .d-block {
+      display: block !important;
+    }
+
+    .error-message {
+      color: rgb(185, 184, 184);
+    }
+
+    .sent-message {
+      color: green;
+    }
+
+    .hover-zoom {
+      transition: transform 0.3s ease;
+    }
+
+    .hover-zoom:hover {
+      transform: scale(1.20);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header"></div>
+
+  <section id="quote" class="py-5">
+    <div class="container">
+      <div class="section-title text-center mb-4">
+        <h2>Get a Quote</h2>
+        <p>Need a custom solution or pricing info? Fill out the form below and we’ll get back to you shortly.</p>
+      </div>
+
+      <form action="quote-request.php" method="post" class="php-email-form row g-3">
+        <div class="col-md-6">
+          <input type="text" name="name" class="form-control" placeholder="Your Name" required />
+        </div>
+        <div class="col-md-6">
+          <input type="email" name="email" class="form-control" placeholder="Your Email" required />
+        </div>
+        <div class="col-md-6">
+          <input type="tel" name="phone" class="form-control" placeholder="Your Phone Number" required />
+        </div>
+        <div class="col-md-6">
+          <select name="subject" class="form-select" required>
+            <option value="" selected>Select a Service</option>
+            <option>Label Design</option>
+            <option>Printer Installation</option>
+            <option>RFID System</option>
+            <option>Barcode Labels</option>
+          </select>
+        </div>
+        <div class="col-12">
+          <textarea name="message" rows="4" class="form-control" placeholder="Your Requirements" required></textarea>
+        </div>
+        <div class="col-12 text-center">
+          <div class="loading">Loading...</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Your quote request has been sent. Thank you!</div>
+          <button type="submit" class="btn px-4 hover-zoom"
+            style="background-color: #28446f; border: none; color: #fff !important;">
+            Submit Request
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <div id="footer" class="footer"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header").innerHTML = data);
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.querySelector('.php-email-form');
+      const loading = document.querySelector('.loading');
+      const errorMessage = document.querySelector('.error-message');
+      const sentMessage = document.querySelector('.sent-message');
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        errorMessage.classList.remove('d-block');
+        sentMessage.classList.remove('d-block');
+        loading.classList.remove('d-block');
+
+        let valid = true;
+        let errorMessages = '';
+
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const phone = form.phone.value.trim();
+        const subject = form.subject.value;
+        const message = form.message.value.trim();
+
+        if (name === '') {
+          valid = false;
+          errorMessages += 'Your Name is required.<br>';
+        }
+        if (email === '' || !validateEmail(email)) {
+          valid = false;
+          errorMessages += 'Valid Email Address is required.<br>';
+        }
+        if (phone === '') {
+          valid = false;
+          errorMessages += 'Your Phone Number is required.<br>';
+        }
+        if (subject === '') {
+          valid = false;
+          errorMessages += 'Please select a Service.<br>';
+        }
+        if (message === '') {
+          valid = false;
+          errorMessages += 'Your Requirements field is required.<br>';
+        }
+
+        if (!valid) {
+          errorMessage.innerHTML = errorMessages;
+          errorMessage.classList.add('d-block');
+          return;
+        }
+
+        loading.classList.add('d-block');
+
+        const formData = new FormData(form);
+        fetch(form.action, {
+          method: 'POST',
+          body: formData
+        })
+          .then(response => {
+            loading.classList.remove('d-block');
+            if (response.ok) {
+              sentMessage.classList.add('d-block');
+              form.reset();
+            } else {
+              errorMessage.innerHTML = 'There was a problem sending your request. Please try again.';
+              errorMessage.classList.add('d-block');
+            }
+          })
+          .catch(() => {
+            loading.classList.remove('d-block');
+            errorMessage.innerHTML = 'Network error. Please try again.';
+            errorMessage.classList.add('d-block');
+          });
+      });
+
+      function validateEmail(email) {
+        const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return re.test(String(email).toLowerCase());
+      }
+    });
+  </script>
+</body>
+
+</html>

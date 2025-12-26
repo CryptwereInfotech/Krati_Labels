@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    
+    .hover-zoom {
+    transition: transform 0.3s ease;
+  }
+
+  .hover-zoom:hover {
+    transform: scale(1.20); /* subtle zoom */
+  }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Example</title>
+
+    <!-- Bootstrap 5 CSS (ensure you have the latest version) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+   
+</head>
+
+<body>
+
+    <!-- header.html -->
+    <header id="header" class="sticky-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light py-3">
+      <div class="container-fluid px-4 px-md-5">
+ 
+        <!-- Logo Section -->
+        <a class="navbar-brand d-flex align-items-end" href="index.html">
+          <img src="assets/img/Logo.g.jpg" alt="Logo" height="50">
+          <img src="assets/img/Logo.name.jpg" alt="Logo Name" height="40" class="ms-2">
+        </a>
+ 
+        <!-- Toggler Button for Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+ 
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+ 
+            <!-- Home -->
+            <li class="nav-item">
+              <a class="nav-link active hover-zoom" href="index.html#hero">Home</a>
+            </li>
+ 
+            <!-- About Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle hover-zoom" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                About
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li><a class="dropdown-item" href="infrastructure.html">Our Infrastructure</a></li>
+                <li><a class="dropdown-item" href="Technology.html">Technology We Use</a></li>
+                <li><a class="dropdown-item" href="IndustriesWeServe.html">Industries We Serve</a></li>
+                <li><a class="dropdown-item" href="certification.html">Certification</a></li>
+              </ul>
+            </li>
+ 
+            <!-- Services Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle  hover-zoom" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="label-design.html">Label Design Services</a></li>
+                <li><a class="dropdown-item" href="barcode-rfid-label-printing.html">Barcode & RFID Label Printing</a></li>
+                <li><a class="dropdown-item" href="printer-support.html">Printer Sales, Installation & Support</a></li>
+                <li><a class="dropdown-item" href="consumables-supply.html">Consumables Supply Services</a></li>
+              </ul>
+            </li>
+ 
+            <!-- Products Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle  hover-zoom" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Products
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                <li><a class="dropdown-item" href="labels-tags.html">Labels & Tags</a></li>
+                <li><a class="dropdown-item" href="labelling-consumables.html">Labelling Consumables</a></li>
+                <li><a class="dropdown-item" href="hardware-solutions.html">Hardware Solutions</a></li>
+                <li><a class="dropdown-item" href="software-applications.html">Software Applications</a></li>
+              </ul>
+            </li>
+ 
+            <!-- Contact -->
+            <li class="nav-item">
+              <a class="nav-link  hover-zoom" href="index.html#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+ 
+      </div>
+    </nav>
+  </header>
+
+    <!-- Bootstrap 5 JS (make sure it's the correct version) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Our Infrastructure | Krati Label & Technology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+       
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .section {
+            background-color: #fff;
+            border: 2px solid #28446f;
+            border-radius: 12px;
+            padding: 40px 20px;
+            margin-top: 60px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .row.full-height {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        .image-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .image-column img {
+            flex: 1;
+            width: 80%;
+            height: 48%;
+            object-fit: cover;
+            border: 2px solid #28446f;
+            border-radius: 8px;
+            margin-bottom: 4%;
+        }
+
+        .image-column img:last-child {
+            margin-bottom: 0;
+        }
+
+        .about-content h3 {
+            color: #28446f;
+            font-weight: bold;
+        }
+
+        .about-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .about-content ul li {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .about-content ul li i {
+            font-size: 24px;
+            color: #28446f;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+        .about-content ul li h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #28446f;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        @media (max-width: 750px) {
+            .image-column {
+                margin-bottom: 20px;
+            }
+
+            .image-column img {
+                height: auto;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Include Header -->
+    <div id="header"></div>
+
+    <!-- Our Infrastructure Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center mb-4 section-title">Our infrastructure
+            </h2>
+  <br>
+            <div class="row full-height">
+
+                <!-- Image Column -->
+                <div class="col-lg-6 image-column">
+                    <img src="assets/img/Label1.jpg" alt="Infrastructure Image 1"
+                    onmouseover="this.style.transform='scale(1.1)'"
+                  onmouseout="this.style.transform='scale(1)'">
+                    <img src="assets/img/Lebal2.jpg" alt="Infrastructure Image 2"
+                    onmouseover="this.style.transform='scale(1.1)'"
+                  onmouseout="this.style.transform='scale(1)'">
+                </div>
+
+                <!-- Text Column -->
+                <div class="col-lg-6 d-flex flex-column justify-content-center">
+                    <div class="about-content ps-lg-3">
+                        <h3>Your Partner in Smart Identification & Labeling Solutions<br>
+                            Empowering Businesses through Innovation and Technology</h3>
+                        <p>
+                            Krati Label & Technology, Founded in 2019, Krati Label and Technology brings over 20 years
+                            of experience in label manufacturing industry. We specialize in providing innovative,
+                            reliable, and high-quality label solutions tailored to meet the unique needs of bussiness
+                            across various sectors.
+                            <br><br>
+                            Our experienced team combines cutting-edge technology with industry expertise to deliver
+                            precise, durable label on time, everytime. At Krati, we are committed to clear
+                            communication, fast response, and building lasting relationship with our clients.
+                        </p>
+                        <ul>
+                            <li>
+                                <i class="bi bi-diagram-3"></i>
+                                <div>
+                                    <h4>Reliable Solutions, Real Impact</h4>
+                                    <p>We provide high-quality, cost-effective solutions tailored to your business
+                                        needs. Our in-house expertise ensures precision and speed in every delivery.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-fullscreen-exit"></i>
+                                <div>
+                                    <h4>Partnering for Progress</h4>
+                                    <p>We believe in building long-term partnerships through dependable products and
+                                        responsive service.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Footer -->
+    <div id="footer" class="footer"></div>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        fetch("header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+</body>
+
+</html>

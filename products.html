@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Our Products</title>
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <style>
+         .hover-zoom {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-zoom:hover {
+            transform: scale(1.15); /* subtle zoom */
+        } 
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <!-- Main Section -->
+    <main class="main">
+        <!-- Section Title -->
+        <section class="section pt-5 pb-5">
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Our Products</h2>
+            </div>
+
+            <div class="container">
+                <div class="row gy-4 justify-content-center">
+
+                    <!-- Labels & Tags -->
+                    <div class="col-md-6 col-lg-3 d-flex">
+                        <div class="product-card p-4 border-0 rounded-4 shadow text-center d-flex flex-column w-100">
+                            <div class="icon mb-3">
+                                <i class="bi bi-tags display-4" style="color: rgb(55, 64, 77) !important;"></i>
+                            </div>
+                            <h4 class="text-center mb-4 section-title">Labels & Tags</h4><br>
+                            <p class="mb-4 flex-grow-1">Durable barcode, RFID, asset, product, and industrial labels for
+                                various industries.</p>
+                            <a href="labels-tags.html" class="btn btn-primary rounded-pill px-4 mt-auto hover-zoom"
+                                style="background-color: #28446f; border: none; color: #fff !important;">Explore</a>
+                        </div>
+                    </div>
+
+                    <!-- Labelling Consumables -->
+                    <div class="col-md-6 col-lg-3 d-flex">
+                        <div class="product-card p-4 border-0 rounded-4 shadow text-center d-flex flex-column w-100">
+                            <div class="icon mb-3">
+                                <i class="bi bi-droplet-half display-4" style="color: rgb(55, 64, 77) !important;"></i>
+                            </div>
+                            <h4 class="text-center mb-4 section-title">Labelling Consumables</h4>
+                            <p class="mb-4 flex-grow-1">High-quality ribbons, adhesives, and supplies for thermal and
+                                RFID printing.</p>
+                            <a href="labelling-consumables.html" class="btn btn-primary rounded-pill px-4 mt-auto hover-zoom"
+                                style="background-color: #28446f; border: none; color: #fff !important;">Explore</a>
+                        </div>
+                    </div>
+
+                    <!-- Hardware Solutions -->
+                    <div class="col-md-6 col-lg-3 d-flex">
+                        <div class="product-card p-4 border-0 rounded-4 shadow text-center d-flex flex-column w-100">
+                            <div class="icon mb-3">
+                                <i class="bi bi-hdd-network display-4" style="color: rgb(55, 64, 77) !important;"></i>
+                            </div>
+                            <h4 class="text-center mb-4 section-title">Hardware Solutions</h4>
+                            <p class="mb-4 flex-grow-1">Barcode printers, scanners, mobile devices, and RFID hardware
+                                for automation.</p>
+                            <a href="hardware-solutions.html" class="btn btn-primary rounded-pill px-4 mt-auto hover-zoom"
+                                style="background-color: #28446f; border: none; color: #fff !important;">Explore</a>
+                        </div>
+                    </div>
+
+                    <!-- Software Applications -->
+                    <div class="col-md-6 col-lg-3 d-flex">
+                        <div class="product-card p-4 border-0 rounded-4 shadow text-center d-flex flex-column w-100">
+                            <div class="icon mb-3">
+                                <i class="bi bi-laptop display-4" style="color: rgb(55, 64, 77) !important;"></i>
+                            </div>
+                            <h4 class="text-center mb-4 section-title">Software Applications</h4>
+                            <p class="mb-4 flex-grow-1">Custom label design, inventory, tracking, and ERP-integrated
+                                labeling software.</p>
+                            <a href="software-applications.html" class="btn btn-primary rounded-pill px-4 mt-auto hover-zoom"
+                                style="background-color: #28446f; border: none; color: #fff !important;">Explore</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Product Card Hover Style -->
+    <style>
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #fff;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(40, 68, 111, 0.15);
+        }
+    </style>
+
+    <!-- Load Header and Footer -->
+    <script>
+        fetch("header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <div id="footer" class="footer"></div>
+</body>
+
+</html>

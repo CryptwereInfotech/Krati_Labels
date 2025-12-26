@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blank Thermal Labels | Krati Label & Technology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .section {
+            background-color: #fff;
+            border: 2px solid #28446f;
+            border-radius: 12px;
+            padding: 50px 20px;
+            margin-top: 60px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            background-color: #ffffff;
+            transition: transform 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .feature-box h5 {
+            color: #28446f;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .feature-box p {
+            font-size: 15px;
+            color: #333;
+        }
+
+        @media (max-width: 767.98px) {
+            .feature-box {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Include Dynamic Header -->
+    <div id="header"></div>
+
+    <!-- Blank Thermal Labels Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-12 text-center mb-4">
+                    <h3 class="fw-bold text-primary">Blank Thermal Labels</h3>
+                    <p class="fst-italic">Versatile labeling solutions designed for efficiency and reliability in
+                        various applications.</p>
+                </div>
+
+                <!-- Feature 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-box">
+                        <img src="assets/img/Labels & Tags/Blank Thermal Labels/Ready for On-Demand Printing.jpg" alt="Ready for On-Demand Printing">
+                        <h5>Ready for On-Demand Printing</h5>
+                        <p>Ideal for barcode, shipping, and product labels.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-box">
+                        <img src="assets/img/Labels & Tags/Blank Thermal Labels/Direct Thermal & Thermal Transfer Options.webp"
+                            alt="Direct Thermal & Thermal Transfer Options">
+                        <h5>Direct Thermal & Thermal Transfer Options</h5>
+                        <p>Suitable for short-term or long-lasting applications.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-box">
+                        <img src="assets/img/Labels & Tags/Blank Thermal Labels/Multiple Sizes & Roll Types.jpg" alt="Multiple Sizes & Roll Types">
+                        <h5>Multiple Sizes & Roll Types</h5>
+                        <p>Compatible with desktop, industrial, and mobile printers.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-box">
+                        <img src="assets/img/Labels & Tags/Blank Thermal Labels/Wide Material Selection.jpg" alt="Wide Material Selection">
+                        <h5>Wide Material Selection</h5>
+                        <p>Paper and synthetic options for different environments.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-box">
+                        <img src="assets/img/Labels & Tags/Blank Thermal Labels/Custom Core & Roll Specifications.webp" alt="Custom Core & Roll Specifications">
+                        <h5>Custom Core & Roll Specifications</h5>
+                        <p>Tailored to fit your printer models.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-box">
+                        <img src="assets/img/Labels & Tags/Blank Thermal Labels/Strong Adhesive Choices.webp" alt="Strong Adhesive Choices">
+                        <h5>Strong Adhesive Choices</h5>
+                        <p>Permanent, removable, and specialty adhesives available.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 7 -->
+                <div class="col-md-6 col-lg-4 mx-auto">
+                    <div class="feature-box">
+                        <img src="assets/img/Labels & Tags/Blank Thermal Labels/Cost-Effective.jpg" alt="Cost-Effective">
+                        <h5>Cost-Effective</h5>
+                        <p>High-quality labels at competitive prices for bulk use.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Dynamic Footer -->
+    <div id="footer" class="footer"></div>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Include Header and Footer -->
+    <script>
+        fetch("header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Asset, Inventory & Retail Labels | Krati Label & Technology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .section {
+            background-color: #fff;
+            border: 2px solid #28446f;
+            border-radius: 12px;
+            padding: 50px 20px;
+            margin-top: 60px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content h3 {
+            color: #28446f;
+            font-weight: bold;
+        }
+
+        .about-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .about-content ul li {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .about-content ul li i {
+            font-size: 24px;
+            color: #28446f;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+        .about-content ul li h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #28446f;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .product-gallery img {
+            border: 2px solid #28446f;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Include Dynamic Header -->
+    <div id="header"></div>
+
+    <!-- Asset, Inventory & Retail Labels Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row gy-3">
+
+                <!-- Image Gallery -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-gallery">
+                        <img src="assets/img/Labels & Tags/Asset, Inventory & Retail Labels/Ideal for Tracking & Identification.png" alt="Asset, Inventory & Retail Labels Image 1"
+                            class="img-fluid mb-3">
+                        <img src="assets/img/Labels & Tags/Asset, Inventory & Retail Labels/Removable or Permanent Adhesives.avif" alt="Asset, Inventory & Retail Labels Image 2"
+                            class="img-fluid">
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="about-content ps-0 ps-lg-3">
+                        <h3>Asset, Inventory & Retail Labels</h3>
+                        <ul>
+                            <li>
+                                <i class="bi bi-box-seam"></i>
+                                <div>
+                                    <h4>Ideal for Tracking & Identification</h4>
+                                    <p>Perfect for fixed assets, stock items, and retail products, ensuring efficient
+                                        management and organization.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-upc-scan"></i>
+                                <div>
+                                    <h4>Supports Barcodes & QR Codes</h4>
+                                    <p>Enables fast and accurate scanning for inventory management and checkout
+                                        processes.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-rulers"></i>
+                                <div>
+                                    <h4>Custom Sizes & Designs</h4>
+                                    <p>Tailored for shelves, products, bins, or equipment to meet specific labeling
+                                        requirements.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-shield-check"></i>
+                                <div>
+                                    <h4>Durable Material Options</h4>
+                                    <p>Resistant to handling, abrasion, and environmental conditions, ensuring longevity
+                                        and reliability.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-123"></i>
+                                <div>
+                                    <h4>Sequential Numbering & Serialization</h4>
+                                    <p>Great for asset management and record keeping, facilitating easy tracking and
+                                        auditing.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-stickies"></i>
+                                <div>
+                                    <h4>Removable or Permanent Adhesives</h4>
+                                    <p>Options for temporary tags or long-term labeling, adaptable to various
+                                        applications.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-tag"></i>
+                                <div>
+                                    <h4>Retail-Ready Printing</h4>
+                                    <p>Includes price, SKU, branding, and promotional information to enhance product
+                                        presentation.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Dynamic Footer -->
+  <div id="footer" class="footer"></div>  
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Include Header and Footer -->
+    <script>
+        fetch("header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+
+</body>
+
+</html>

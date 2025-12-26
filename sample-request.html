@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request a Sample</title>
+
+    <!-- Bootstrap & AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <!-- PHP Email Form validation -->
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin-top: 50px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #28446f;
+        }
+
+        .request-form {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-submit {
+            background-color: #28446f;
+            border: none;
+            color: #fff;
+        }
+
+        .btn-submit:hover {
+            background-color: #203a5e;
+        }
+
+        .loading,
+        .error-message,
+        .sent-message {
+            display: none;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .loading.d-block,
+        .error-message.d-block,
+        .sent-message.d-block {
+            display: block;
+        }
+
+        .error-message {
+            color: red;
+        }
+
+        .sent-message {
+            color: green;
+        }
+        .hover-zoom {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-zoom:hover {
+            transform: scale(1.40 ); /* subtle zoom */
+        } 
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>Request a Sample</h2>
+            <p style="color: #203a5e;">Try before you buy! Request label samples to test quality and compatibility.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="request-form">
+                    <h4 style="color: #203a5e;"class="fw-bold" data-aos="fade-up" data-aos-delay="200">Fill out the form below:</h4>
+                    <form action="sample-request.php" method="POST" class="php-email-form" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="companyName" class="form-label">Company Name</label>
+                            <input type="text" class="form-control" id="companyName" name="company" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="product" class="form-label">Product of Interest</label>
+                            <select class="form-select" id="product" name="subject" required>
+                                <option value="" selected>Select a Product</option>
+                                <option value="Barcode Printers">Barcode Printers</option>
+                                <option value="RFID Printers">RFID Printers</option>
+                                <option value="Consumables">Consumables</option>
+                                <option value="Scanners">Scanners</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="comments" class="form-label">Additional Comments</label>
+                            <textarea class="form-control" id="comments" name="message" rows="4"></textarea>
+                        </div>
+
+                        <div class="text-center">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your request has been sent. Thank you!</div>
+                            <button type="submit" class="btn btn-submit w-90 hover-zoom" style="background-color: #28446f; color: #fff;">Submit
+                                Request</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/sample.js"></script>
+
+
+    <!-- Bootstrap & AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Header and Footer loading -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+      fetch("header.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("header").innerHTML = data);
+  
+      fetch("footer.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+  
+      document.addEventListener('DOMContentLoaded', function () {
+        const form = document.querySelector('.php-email-form');
+        const loading = document.querySelector('.loading');
+        const errorMessage = document.querySelector('.error-message');
+        const sentMessage = document.querySelector('.sent-message');
+  
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+  
+          errorMessage.classList.remove('d-block');
+          sentMessage.classList.remove('d-block');
+          loading.classList.remove('d-block');
+  
+          let valid = true;
+          let errorMessages = '';
+  
+          const name = form.name.value.trim();
+          const email = form.email.value.trim();
+          const company = form.company.value.trim();
+          const subject = form.subject.value;
+          const message = form.message.value.trim();
+  
+          if (name === '') {
+            valid = false;
+            errorMessages += 'Your Name is required.<br>';
+          }
+          if (email === '' || !validateEmail(email)) {
+            valid = false;
+            errorMessages += 'Valid Email Address is required.<br>';
+          }
+          if (company  === '') {
+            valid = false;
+            errorMessages += 'Your company name is required.<br>';
+          }
+          if (subject === '') {
+            valid = false;
+            errorMessages += 'Please select a Service.<br>';
+          }
+          if (message === '') {
+            valid = false;
+            errorMessages += 'Your Requirements field is required.<br>';
+          }
+  
+          if (!valid) {
+            errorMessage.innerHTML = errorMessages;
+            errorMessage.classList.add('d-block');
+            return;
+          }
+  
+          loading.classList.add('d-block');
+  
+          const formData = new FormData(form);
+          fetch(form.action, {
+            method: 'POST',
+            body: formData
+          })
+            .then(response => {
+              loading.classList.remove('d-block');
+              if (response.ok) {
+                sentMessage.classList.add('d-block');
+                form.reset();
+              } else {
+                errorMessage.innerHTML = 'There was a problem sending your request. Please try again.';
+                errorMessage.classList.add('d-block');
+              }
+            })
+            .catch(() => {
+              loading.classList.remove('d-block');
+              errorMessage.innerHTML = 'Network error. Please try again.';
+              errorMessage.classList.add('d-block');
+            });
+        });
+  
+        function validateEmail(email) {
+          const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+          return re.test(String(email).toLowerCase());
+        }
+      });
+    </script>
+    <div id="footer" class="footer"></div>
+    
+</body>
+
+</html>
